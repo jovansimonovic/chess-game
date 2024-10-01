@@ -4,6 +4,7 @@ import Chessboard from "chessboardjsx";
 import { Chess } from "chess.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ResetButton from "./components/ResetButton";
 
 function App() {
   const [game, setGame] = useState(new Chess());
@@ -66,9 +67,7 @@ function App() {
       />
       <div className="turn-reset-container">
         <p className="status">{message}</p>
-        <div className="reset-button" onClick={handleResetGame}>
-          Reset Game
-        </div>
+        <ResetButton handleResetGame={handleResetGame} />
       </div>
       <ToastContainer position="bottom-left" />
     </div>
