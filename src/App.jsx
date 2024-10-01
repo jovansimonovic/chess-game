@@ -44,7 +44,6 @@ function App() {
         return;
       }
     } catch (error) {
-      setFen(game.fen());
       toast.warning("Illegal Move. Try Again");
     }
   };
